@@ -1,0 +1,6 @@
+{{- if .Site.IsServer }}
+{{- $cssUrl := index .Site.Data.assetHashes "style.css" }}
+<link rel="stylesheet" href="/css/{{ $cssUrl }}">
+{{- else }}
+<link rel="stylesheet" href="/css/style.css">
+{{- end }}

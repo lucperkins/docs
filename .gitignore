@@ -15,3 +15,7 @@ crash.log
 static/.DS_Store
 
 prometheus_rsa
+
+data/assetHashes.json
+node_modules/
+static/css/style-*.css

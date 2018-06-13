@@ -1,23 +1,29 @@
-DOWNLOADS := prometheus alertmanager blackbox_exporter consul_exporter graphite_exporter haproxy_exporter memcached_exporter mysqld_exporter node_exporter pushgateway statsd_exporter
+HUGO          = hugo
+YARN          = yarn
+NODE_BIN      = node_modules/.bin
+GULP         := $(NODE_BIN)/gulp
+CONCURRENTLY := $(NODE_BIN)/concurrently
 
-build: clean downloads compile
+setup:
+	$(YARN)
 
-clean:
-	rm -rf output downloads repositories
+build-static-assets:
+	$(GULP) build
 
-compile:
-	bundle exec nanoc
+develop-static-assets:
+	$(GULP) dev
 
-downloads: $(DOWNLOADS:%=downloads/%/repo.json) $(DOWNLOADS:%=downloads/%/releases.json)
+build:
+	$(HUGO)
 
-downloads/%/repo.json:
-	@mkdir -p $(dir $@)
-	@echo "curl -sf -H 'Accept: application/vnd.github.v3+json' <GITHUB_AUTHENTICATION> https://api.github.com/repos/prometheus/$* > $@"
-	@curl -sf -H 'Accept: application/vnd.github.v3+json' $(GITHUB_AUTHENTICATION) https://api.github.com/repos/prometheus/$* > $@
+serve:
+	$(HUGO) server \
+	--buildDrafts \
+	--buildFuture \
+	--disableFastRender \
+	--ignoreCache
 
-downloads/%/releases.json:
-	@mkdir -p $(dir $@)
-	@echo "curl -sf -H 'Accept: application/vnd.github.v3+json' <GITHUB_AUTHENTICATION> https://api.github.com/repos/prometheus/$*/releases > $@"
-	@curl -sf -H 'Accept: application/vnd.github.v3+json' $(GITHUB_AUTHENTICATION) https://api.github.com/repos/prometheus/$*/releases > $@
+develop-content: serve
 
-.PHONY: build compile deploy
+develop-site:
+	$(CONCURRENTLY) "make develop-static-assets" "make serve"
