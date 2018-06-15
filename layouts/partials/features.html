@@ -1,0 +1,33 @@
+{{- $features := .Site.Params.features }}
+<section class="section section--features">
+  <div class="container">
+    <div class="columns is-0 is-multiline">
+      {{- range $features }}
+      {{- $iconType := cond (eq .fa true) "fa" "fas" }}
+      <div class="column is-one-quarter">
+        <div class="card">
+          <header class="card-header">
+            {{- with .icon }}
+            <a href="#" class="card-header-icon">
+              <span class="icon has-text-primary">
+                <i class="{{ $iconType }} fa-lg fa-{{ . }}"></i>
+              </span>
+            </a>
+            {{- end }}
+            {{- with .title }}
+            <p class="card-header-title">
+              {{ . }}
+            </p>
+            {{- end }}
+          </header>
+          {{- with .text }}
+          <div class="card-content">
+            {{ . | markdownify }}
+          </div>
+          {{- end }}
+        </div>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
