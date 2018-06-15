@@ -1,5 +1,10 @@
 title: Prometheus
 
 params:
+  announcement: |
+    Join us at PromCon in Munich on August 9 & 10, 2018  —  [CfP & tickets](https://promcon.io/2018-munich/)
+  hero:
+    title: From metrics to insight
+    subtitle: Power your metrics and alerting with a leading open source monitoring solution
   logos:
     navbar: prometheus-logo-grey.svg

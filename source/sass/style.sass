@@ -1,13 +1,50 @@
+// Font imports
+@import url('https://fonts.googleapis.com/css?family=Lato')
+  
 // Initial Bulma variables
 @import ../../node_modules/bulma/sass/utilities/initial-variables
 @import ../../node_modules/bulma/sass/utilities/functions
 
 @import variables
 
+=shadow
+  text-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px
+
+=thin
+  font-weight: 300
+
 .navbar-title
   color: $gray
   margin-left: 10%
   font-size: 1.75rem
+
+.hero-body
+  background-color: $orange
+  background-image: url("/img/jumbotron-background.png")
+
+.hero-main
+  padding: $hero-main-padding-y 0
+
+.hero-title, .hero-subtitle
+  +shadow
+
+.hero-title
+  +thin
+  font-size: $hero-font-base
+  color: white
+  line-height: 57px
+  margin-bottom: 1rem
+
+.hero-subtitle
+  font-size: $hero-font-base * .5
+  color: rgba(255, 255, 255, 0.8)
+
+.section--announcement
+  background-color: rgb(245, 245, 245)
+
+  .announcement-text
+    +thin
+    font-size: 1.5rem
 
 // Final Bulma import
 @import ../../node_modules/bulma/bulma

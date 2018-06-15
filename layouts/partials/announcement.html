@@ -1,0 +1,8 @@
+{{- $announcement := .Site.Params.announcement }}
+<section class="section section--announcement">
+  <div class="container has-text-centered">
+    <p class="announcement-text">
+      {{ $announcement | markdownify }}
+    </p>
+  </div>
+</section>
