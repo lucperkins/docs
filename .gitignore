@@ -19,3 +19,4 @@ prometheus_rsa
 data/assetHashes.json
 node_modules/
 static/css/style-*.css
+.DS_Store

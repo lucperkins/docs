@@ -1,1 +1,5 @@
 title: Prometheus
+
+params:
+  logos:
+    navbar: prometheus-logo-grey.svg
