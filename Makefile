@@ -13,7 +13,7 @@ build-static-assets:
 develop-static-assets:
 	$(GULP) dev
 
-build:
+build: build-static-assets
 	$(HUGO)
 
 serve:
