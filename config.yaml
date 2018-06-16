@@ -11,7 +11,7 @@ params:
     text: |
       Even though Borgmon remains internal to Google, the idea of treating time-series data as a data source for generating alerts is now accessible to everyone through those open source tools like Prometheus [...]
     source: |
-      [**Site Reliability Engineering**: How Google Runs Production](http://shop.oreilly.com/product/0636920041528.do) — (O'Reilly Media)
+      [**Site Reliability Engineering**: How Google Runs Production Systems](http://shop.oreilly.com/product/0636920041528.do) — (O'Reilly Media)
   logos:
     navbar: prometheus-logo-grey.svg
   opensource:
