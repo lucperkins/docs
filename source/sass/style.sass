@@ -1,5 +1,5 @@
 // Font imports
-@import url('https://fonts.googleapis.com/css?family=Lato')
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700')
   
 // Initial Bulma variables
 @import ../../node_modules/bulma/sass/utilities/initial-variables
@@ -12,6 +12,10 @@
 
 =thin
   font-weight: 300
+
+=section-border
+  border-top: 1px solid $grey-lighter
+  border-bottom: 1px solid $grey-lighter
 
 .navbar-title
   color: $gray
@@ -42,14 +46,45 @@
   font-size: $hero-font-base * .5
   color: rgba(255, 255, 255, 0.8)
 
-.section--announcement
-  background-color: rgb(245, 245, 245)
+.card-content
+  min-height: 12rem
 
-  .announcement-text
-    +thin
-    font-size: 1.5rem
+.section
+  &--announcement
+    background-color: rgb(245, 245, 245)
 
-.section--features
+    .announcement-text
+      font-size: 1.5rem
+
+  &--quote
+    +section-border
+    padding: 2rem
+
+    .quote-container
+      margin: 2rem 0
+
+    .quote
+      +thin
+      padding: 0 15%
+      font-size: 1.4rem
+      font-style: italic
+      margin-bottom: 1.5rem
+
+    .source
+      font-size: 1.2rem
+  
+  &--opensource
+    +section-border
+
+    .oss
+      margin-left: 2rem
+
+    .msg
+      font-size: 1.1rem
+
+    .cncf-logo
+      margin-top: 2rem
+      max-width: 40%
 
 // Final Bulma import
 @import ../../node_modules/bulma/bulma

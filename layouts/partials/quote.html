@@ -1,0 +1,14 @@
+{{- $quote := .Site.Params.quote.text }}
+{{- $source := .Site.Params.quote.source }}
+<section class="section section--quote">
+  <div class="container has-text-centered">
+    <section class="quote-container">
+      <h1 class="quote">
+        &ldquo;{{ $quote }}&rdquo;
+      </h1>
+      <p class="source">
+        &mdash; {{ $source | markdownify }}
+      </p>
+    </section>
+  </div>
+</section>

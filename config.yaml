@@ -5,9 +5,19 @@ params:
     Join us at PromCon in Munich on August 9 & 10, 2018  —  [CfP & tickets](https://promcon.io/2018-munich/)
   hero:
     title: From metrics to insight
-    subtitle: Power your metrics and alerting with a leading open source monitoring solution
+    subtitle: Power your metrics and alerting with the leading open source monitoring solution
+  quote:
+    text: |
+      Even though Borgmon remains internal to Google, the idea of treating time-series data as a data source for generating alerts is now accessible to everyone through those open source tools like Prometheus [...]
+    source: |
+      [**Site Reliability Engineering**: How Google Runs Production](http://shop.oreilly.com/product/0636920041528.do) — (O'Reilly Media)
   logos:
     navbar: prometheus-logo-grey.svg
+  opensource:
+    message: |
+      Prometheus is 100% open source and community-driven.
+      
+      All components are available under the [Apache 2 License](http://www.apache.org/licenses/LICENSE-2.0) on GitHub.
   features:
   - title: Dimensional data
     icon: flask

@@ -8,11 +8,11 @@
         <div class="card">
           <header class="card-header">
             {{- with .icon }}
-            <a href="#" class="card-header-icon">
+            <div class="card-header-icon">
               <span class="icon has-text-primary">
                 <i class="{{ $iconType }} fa-lg fa-{{ . }}"></i>
               </span>
-            </a>
+            </div>
             {{- end }}
             {{- with .title }}
             <p class="card-header-title">

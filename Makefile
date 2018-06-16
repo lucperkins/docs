@@ -13,7 +13,9 @@ build-static-assets:
 develop-static-assets:
 	$(GULP) dev
 
-build: build-static-assets
+ netlify-build: build-static-assets build-site
+
+build-site:
 	$(HUGO)
 
 serve:

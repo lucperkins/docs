@@ -1,0 +1,18 @@
+{{- $message := .Site.Params.opensource.message }}
+<section class="section section--opensource">
+  <div class="container has-text-centered">
+    <h1 class="title">
+      <span class="icon">
+        <i class="fab fa-github"></i>
+      </span>
+      <span class="oss">
+        Open source
+      </span>
+    </h1>
+    {{ $message | markdownify }}
+    <p>
+      We are a <a href="https://cncf.io">Cloud Native Computing Foundation</a> member project.
+    </p>
+    <img class="cncf-logo" src="/img/logos/cncf.png">
+  </div>
+</section>
