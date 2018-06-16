@@ -17,14 +17,28 @@
   border-top: 1px solid $grey-lighter
   border-bottom: 1px solid $grey-lighter
 
-.navbar-title
-  color: $gray
-  margin-left: 10%
-  font-size: 1.75rem
+.is-twitter-blue
+  .icon
+    color: $twitter-blue
 
-.hero-body
-  background-color: $orange
-  background-image: url("/img/jumbotron-background.png")
+.navbar
+  .navbar-title
+    color: $gray
+    margin-left: 10%
+    font-size: 1.75rem
+
+  .navbar-link
+    color: red
+    font-weight: 700
+
+  .navbar-burger
+    span
+      color: $primary
+
+.hero
+  .hero-body
+    background-color: $orange
+    background-image: url("/img/jumbotron-background.png")
 
 .hero-main
   padding: $hero-main-padding-y 0
@@ -46,15 +60,14 @@
   font-size: $hero-font-base * .5
   color: rgba(255, 255, 255, 0.8)
 
-.card-content
-  min-height: 12rem
-
 .section
   &--announcement
     background-color: rgb(245, 245, 245)
 
     .announcement-text
       font-size: 1.5rem
+  
+  &--features
 
   &--quote
     +section-border

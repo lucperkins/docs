@@ -1,19 +1,65 @@
-{{- $navbarLogo := .Site.Params.logos.navbar }}
+{{- $navbarLogo := printf "/img/logos/%s" .Site.Params.logos.navbar | absURL }}
 <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        <img src="{{ printf "/img/logos/%s" $navbarLogo }}" alt="Prometheus navbar logo">
+        <img src="{{ $navbarLogo }}" alt="Prometheus navbar logo">
         <span class="navbar-title">
           {{ .Site.Title }}
         </span>
       </a>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        
       </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link is-uppercase is-large">
+            Docs
+          </a>
+      
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Overview
+            </a>
+            <a class="navbar-item">
+              Elements
+            </a>
+            <a class="navbar-item">
+              Components
+            </a>
+            <hr class="navbar-divider">
+            <div class="navbar-item">
+              Version 0.7.1
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="button is-twitter-blue">
+                <span class="icon">
+                  <i class="fab fa-lg fa-twitter"></i>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a class="button">
+                <span class="icon">
+                  <i class="fab fa-lg fa-github"></i>
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
