@@ -21,15 +21,18 @@
   .icon
     color: $twitter-blue
 
+    &:hover
+      color: darken($twitter-blue, 25%)
+
+.is-github
+  .icon:hover
+    color: $grey-light
+
 .navbar
   .navbar-title
     color: $gray
     margin-left: 10%
     font-size: 1.75rem
-
-  .navbar-link
-    color: red
-    font-weight: 700
 
   .navbar-burger
     span
@@ -52,13 +55,11 @@
 .hero-title
   +thin
   font-size: $hero-font-base
-  color: white
   line-height: 57px
   margin-bottom: 1rem
 
 .hero-subtitle
   font-size: $hero-font-base * .5
-  color: rgba(255, 255, 255, 0.8)
 
 .section
   &--announcement
