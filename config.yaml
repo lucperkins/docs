@@ -2,6 +2,8 @@ title: Prometheus
 baseURL: https://prometheus-staging.netlify.com/
 
 params:
+  description: |
+    An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
   announcement: |
     Join us at PromCon in Munich on August 9 & 10, 2018  —  [CfP & tickets](https://promcon.io/2018-munich/)
   hero:

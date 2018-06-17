@@ -1,3 +1,25 @@
 {{- $faviconUrl := "/img/favicons/favicon.ico" | absURL }}
+{{- $description := .Site.Params.description }}
+{{- $appleTouchIconSizes := slice 57 60 72 76 114 120 144 152 180 }}
+{{- $androidChromeIconSizes := slice 192 }}
+{{- $faviconSizes := slice 16 32 96 }}
 <meta charset="utf-8">
-<link rel="icon" href="{{ $faviconUrl }}" type="image/x-icon">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- range $appleTouchIconSizes }}
+{{- $sizes := printf "%dx%d" . . }}
+{{- $url := printf "/img/favicons/%dx%d.png" . . }}
+<link rel="apple-touch-icon" sizes="{{ $sizes }}" href="{{ $url }}">
+{{- end }}
+{{- range $androidChromeIconSizes }}
+{{- $sizes := printf "%dx%d" . . }}
+{{- $url := printf "/img/favicons/android-chrome-%dx%d.png" . . }}
+<link rel="icon" type="image/png" sizes="{{ $sizes }}" href="{{ $url }}">
+{{- end }}
+{{- range $faviconSizes }}
+{{- $sizes := printf "%dx%d" . . }}
+{{- $url := printf "/img/favicons/%dx%d.png" . . }}
+<link rel="icon" type="image/png" sizes="{{ $sizes }}" href="{{ $url }}">
+{{- end }}
+
+<link rel="shortcut icon" href="{{ $faviconUrl }}" type="image/x-icon">

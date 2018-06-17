@@ -1,18 +1,18 @@
 {{- $quote := .Site.Params.quote.text }}
 {{- $source := .Site.Params.quote.source }}
 <section class="section section--quote">
-  <div class="container">
-    <div class="columns has-text-centered is-vcentered">
+  <div class="container has-text-centered">
+    <div class="columns is-vcentered">
       <div class="column is-half">
        <img class="sre" src="/img/site-reliability-engineering.jpg">
       </div>
 
-      <div class="column is-half">
-        <span class="has-text-weight-normal is-size-4 is-size-5-mobile is-italic">
+      <div class="column">
+        <span class="quote has-text-weight-normal is-size-4 is-size-5-mobile is-italic">
           &ldquo;{{ $quote }}&rdquo;
         </span>
         <hr />
-        <p>
+        <p class="source is-size-5">
           {{ $source | markdownify }}
         </p>
       </div>

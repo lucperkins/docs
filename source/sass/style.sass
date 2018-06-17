@@ -13,10 +13,6 @@
 =thin
   font-weight: 300
 
-=section-border
-  border-top: 1px solid $grey-lighter
-  border-bottom: 1px solid $grey-lighter
-
 .is-twitter-blue
   .icon
     color: $twitter-blue
@@ -31,13 +27,15 @@
 .navbar
   .navbar-title
     margin-left: 10%
-    font-size: 1.75rem
 
   .navbar-burger
     span
       color: $primary
 
 .hero
+  .buttons
+    margin-top: 2rem
+    
   .hero-body
     background-color: $orange
     background-image: url("/img/jumbotron-background.png")
@@ -62,22 +60,22 @@
 
 .section
   &--announcement
-    background-color: rgb(245, 245, 245)
-
-    .announcement-text
-      font-size: 1.5rem
+    background-color: $white-ter
+    padding: 1.5rem 5%
   
   &--features
+    margin: 0 5%
 
   &--quote
-    +section-border
-
     img.sre
-      max-width: 50%
+      max-width: 40%
+
+    .quote
+
+    .source
+      padding: 0 3rem
   
   &--opensource
-    +section-border
-
     .oss
       margin-left: 2rem
 
