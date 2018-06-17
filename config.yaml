@@ -30,6 +30,80 @@ params:
       Prometheus is 100% open source and community-driven.
       
       All components are available under the [Apache 2 License](http://www.apache.org/licenses/LICENSE-2.0) on GitHub.
+  users:
+  - name: Argus
+    url: http://argus-sec.com/
+  - name: Boxever
+    url: http://www.boxever.com
+  - name: Branch
+    url: http://www.branch.io
+  - name: cesanta
+    url: https://www.cesanta.com
+  - name: CoreOS
+    url: https://www.coreos.com
+  - name: crononauta
+    url: http://www.crononauta.com
+  - name: digitalocean
+    url: https://www.digitalocean.com
+  - name: Docker
+    url: https://www.docker.com
+  - name: Ericsson
+    url: https://www.ericsson.com
+  - name: Eurotech
+    url: https://www.eurotech.com
+  - name: Fosdem
+    url: https://www.fosdem.org
+  - name: FreshTracks
+    url: https://freshtracks.io
+  - name: giantswarm
+    url: https://giantswarm.io
+  - name: Improbable
+    url: http://improbable.io
+  - name: Jodel
+    url: https://www.jodel-app.com
+  - name: JustWatch
+    url: https://www.justwatch.com
+  - name: Kumina
+    url: https://www.kumina.nl
+  - name: latencyat
+    url: https://latency.at
+  - name: Loodse
+    url: https://loodse.com
+  - name: MavenSecurities
+    url: http://www.mavensecurities.com/
+  - name: Outbrain
+    url: http://www.outbrain.com
+  - name: Percona
+    url: https://www.percona.com
+  - name: pingcap
+    url: https://www.pingcap.com
+  - name: Qaware
+    url: https://www.qaware.de
+  - name: quobyte
+    url: http://www.quobyte.com
+  - name: RobustPerception
+    url: https://www.robustperception.io
+  - name: ShowMax
+    url: http://www.showmax.com
+  - name: shuttlecloud
+    url: https://www.shuttlecloud.com
+  - name: soundcloud
+    url: https://www.soundcloud.com
+  - name: Spacenet
+    url: https://www.space.net
+  - name: Sysdig
+    url: https://www.sysdig.com
+  - name: transloadit
+    url: https://transloadit.com
+  - name: WeLearn
+    url: https://www.uda100.com
+  - name: unosoft
+    url: https://www.unosoft.hu
+  - name: variomedia
+    url: https://www.variomedia.de
+  - name: weave
+    url: https://www.weave.works
+  
   features:
   - title: Dimensional data
     icon: flask

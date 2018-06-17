@@ -13,6 +13,9 @@
 =thin
   font-weight: 300
 
+=smaller-container
+  padding: 0 15%
+
 .is-twitter-blue
   .icon
     color: $twitter-blue
@@ -68,21 +71,38 @@
     margin: 0 5%
 
   &--quote
+    .container
+      padding: 2rem 0
+
     img.sre
       max-width: 40%
 
-    .quote
-      padding: 0 20%
+    .quote, .source
+      +smaller-container
 
     .source
       margin-top: 1.25rem
       color: $grey-light
-      padding: 0 3rem
 
       a
         color: $blue
   
   &--opensource
+    h1
+      margin-bottom: 1rem
+
+      .icon
+        margin-right: 1rem
+
+    .oss-message
+      margin-botton: 1.5rem
+
+      p + p
+        margin-top: .5rem
+
+    .cncf
+      +smaller-container
+
     .oss
       margin-left: 2rem
 
@@ -91,7 +111,19 @@
 
     .cncf-logo
       margin-top: 2rem
-      max-width: 40%
+      width: 50%
+  
+  &--users
+    .container
+      padding: 0 10%
+
+    &--title
+      margin-bottom: 1.5rem
+
+    .user-logo
+      height: 40px
+      margin-right: 2rem
+      margin-bottom: 1rem
 
 // Final Bulma import
 @import ../../node_modules/bulma/bulma

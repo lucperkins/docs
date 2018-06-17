@@ -1,0 +1,13 @@
+{{- $users := .Site.Params.users }}
+<section class="section section--users">
+  <div class="container has-text-centered">
+    <h3 class="section--users--title is-size-3 is-size-4-tablet">
+      Some of our users include:
+    </h3>
+    {{- range $users }}
+    <a href="{{ .url }}">
+      <img class="user-logo" src="/img/company-logos/{{ .name }}.png">
+    </a>
+    {{- end }}
+  </div>
+</section>

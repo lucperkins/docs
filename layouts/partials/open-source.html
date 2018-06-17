@@ -1,18 +1,34 @@
 {{- $message := .Site.Params.opensource.message }}
+{{- $cncfLogo := "/img/logos/cncf.png" | absURL }}
 <section class="section section--opensource">
   <div class="container has-text-centered">
-    <h1 class="title">
-      <span class="icon">
-        <i class="fab fa-github"></i>
-      </span>
-      <span class="oss">
-        Open source
-      </span>
-    </h1>
-    {{ $message | markdownify }}
-    <p>
-      We are a <a href="https://cncf.io">Cloud Native Computing Foundation</a> member project.
-    </p>
-    <img class="cncf-logo" src="/img/logos/cncf.png">
+    <div class="columns is-vcentered">
+      <div class="column is-half">
+        <h1 class="is-size-3">
+          <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+          <span>
+            Open source
+          </span>
+        </h1>
+
+        <span class="oss-message is-size-5 is-size-6-tablet">
+          {{ $message | markdownify }}
+        </span>
+
+        <br />
+        
+        <span>
+          <a class="github-button" href="https://github.com/prometheus/prometheus" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star prometheus/prometheus on GitHub">Star</a>
+        </span>
+      </div>
+      <div class="column is-half">
+        <p class="cncf is-size-4">
+          We are a <a href="https://cncf.io">Cloud Native Computing Foundation</a> member project.
+        </p>
+        <img class="cncf-logo" src="{{ $cncfLogo }}">
+      </div>
+    </div>
   </div>
 </section>
