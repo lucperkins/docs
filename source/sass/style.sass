@@ -16,6 +16,15 @@
 =smaller-container
   padding: 0 15%
 
+// Guarantee sticky footer
+.page
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+
+  .main
+    flex: 1
+
 .is-twitter-blue
   .icon
     color: $twitter-blue
@@ -88,6 +97,9 @@
         color: $blue
   
   &--opensource
+    .container
+      padding: 0 10%
+
     h1
       margin-bottom: 1rem
 
@@ -114,14 +126,8 @@
       width: 50%
   
   &--users
-    .container
-      padding: 0 10%
-
-    &--title
-      margin-bottom: 1.5rem
-
     .user-logo
-      height: 40px
+      height: 30px
       margin-right: 2rem
       margin-bottom: 1rem
 

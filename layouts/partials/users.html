@@ -1,13 +1,19 @@
 {{- $users := .Site.Params.users }}
 <section class="section section--users">
   <div class="container has-text-centered">
-    <h3 class="section--users--title is-size-3 is-size-4-tablet">
-      Some of our users include:
-    </h3>
-    {{- range $users }}
-    <a href="{{ .url }}">
-      <img class="user-logo" src="/img/company-logos/{{ .name }}.png">
-    </a>
-    {{- end }}
+    <div class="columns is-variable is-vcentered">
+      <div class="column is-one-third">
+        <h1 class="is-size-3 has-text-weight-semibold">
+          Some of our<br />users include:
+        </h1>
+      </div>
+      <div class="column is-two-thirds">
+          {{- range $users }}
+          <a href="{{ .url }}">
+            <img class="user-logo" src="/img/company-logos/{{ .name }}.png">
+          </a>
+          {{- end }}
+      </div>
+    </div>
   </div>
 </section>

@@ -1,5 +1,8 @@
+{{- $thisYear := now.Format "2006" }}
 <footer class="footer">
-  <div class="container">
-
+  <div class="container has-text-centered">
+    <span class="has-text-primary">
+      &copy; Prometheus Authors {{ $thisYear }}
+    </span>
   </div>
 </footer>
