@@ -2,8 +2,18 @@ title: Prometheus
 baseURL: https://prometheus-staging.netlify.com/
 
 params:
+  author: Prometheus
   description: |
     An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
+  keywords:
+  - prometheus
+  - monitoring
+  - monitoring system
+  - time series
+  - time series database
+  - alerting
+  - metrics
+  - telemetry
   announcement: |
     Join us at PromCon in Munich on August 9 & 10, 2018  —  [CfP & tickets](https://promcon.io/2018-munich/)
   hero:
