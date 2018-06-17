@@ -1,6 +1,6 @@
-{{- $quote := .Site.Params.quote.text }}
-{{- $source := .Site.Params.quote.source }}
-<section class="section section--quote">
+{{- $quote := .Site.Params.quote.text -}}
+{{- $source := .Site.Params.quote.source -}}
+<section class="section section--quote has-background-black-ter">
   <div class="container has-text-centered">
     <div class="columns is-vcentered">
       <div class="column is-half">
@@ -8,11 +8,11 @@
       </div>
 
       <div class="column">
-        <span class="quote has-text-weight-normal is-size-4 is-size-5-mobile is-italic">
+        <blockquote class="has-text-white quote has-text-weight-normal is-size-4 is-size-5-tablet">
           &ldquo;{{ $quote }}&rdquo;
-        </span>
-        <hr />
-        <p class="source is-size-5">
+        </blockquote>
+
+        <p class="source is-size-5 is-size-6-tablet">
           {{ $source | markdownify }}
         </p>
       </div>

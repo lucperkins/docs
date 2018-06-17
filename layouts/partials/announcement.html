@@ -1,9 +1,9 @@
 {{- $announcement := .Site.Params.announcement }}
-<nav class="level is-mobile section--announcement">
+<nav class="level is-mobile section--announcement has-background-black-ter">
   <div class="container has-text-centered">
     <div class="level-item">
       <div>
-        <p class="is-size-4 is-size-5-mobile has-text-weight-semibold">
+        <p class="has-text-white is-size-4 is-size-5-mobile has-text-weight-semibold">
           {{ $announcement | markdownify }}
         </p>
       </div>
