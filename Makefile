@@ -13,7 +13,7 @@ build-static-assets:
 develop-static-assets:
 	$(GULP) dev
 
- netlify-build: build-static-assets build-site
+netlify-build: build-static-assets build-site
 
 build-site:
 	$(HUGO)

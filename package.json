@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "bulma": "^0.7.1",
+    "bulma-accordion": "^2.0.0",
     "concurrently": "^3.5.1",
     "del": "^3.0.0",
     "gulp": "gulpjs/gulp#4.0",

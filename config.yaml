@@ -1,5 +1,7 @@
 title: Prometheus
 baseURL: https://prometheus-staging.netlify.com/
+pygmentsCodeFences: true
+pygmentsUseClasses: true
 
 params:
   author: Prometheus

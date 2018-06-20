@@ -6,9 +6,15 @@
         {{ partial "docs-nav.html" . }}
       </div>
       <div class="column is-10">
+        <h1 class="is-size-1 title">{{ .Title }}</h1>
+
         <div class="content">
           {{ .Content }}
         </div>
+      </div>
+
+      <div class="column is-2">
+        {{ .TableOfContents }}
       </div>
     </div>
   </article>
