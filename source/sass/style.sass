@@ -23,8 +23,41 @@
 =x
   border: 1px solid red
 
-.article--docs
-  margin: 2rem 0
+=fix
+  position: fixed
+
+.page--docs
+  .article--docs
+    margin: 2rem 0
+    &--nav
+    &--content
+    &--toc
+      .toc--container
+        +fix
+
+        #TableOfContents
+          padding: 5%
+          max-width: 80%
+          background-color: $black
+          a
+            color: $white-ter
+
+          ul
+            li
+              ul
+                li
+                  font-size: 1.5rem
+                  ul
+                    li
+                      font-size: 1.25rem
+                      padding-left: 5%
+                      line-height: 1.25
+                      ul
+                        li
+                          font-size: 1rem
+                          padding-left: 10%
+                      
+
 
 // Guarantee sticky footer
 .page

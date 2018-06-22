@@ -27,5 +27,5 @@ serve:
 
 develop-content: serve
 
-develop-site:
+develop-site: build-static-assets
 	$(CONCURRENTLY) "make develop-static-assets" "make serve"

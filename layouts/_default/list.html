@@ -1,22 +1,32 @@
 {{ define "main" }}
-<div class="container">
-  <article class="article--{{ .Section }}">
+{{- $description := .Params.description }}
+<article class="article--{{ .Section }}">
+  <div class="container">
     <div class="columns">
-      <div class="column is-2">
+      <section class="column is-2 is-hidden-touch article--docs--nav">
         {{ partial "docs-nav.html" . }}
-      </div>
-      <div class="column is-10">
+      </section>
+
+      <section class="column is-8 is-12-touch article--docs--content">
         <h1 class="is-size-1 title">{{ .Title }}</h1>
+        {{- with $description }}
+        <h2 class="is-size-3 subtitle">{{ . }}</h2>
+        {{- end }}
 
-        <div class="content">
+        <hr />
+
+        <section class="content">
           {{ .Content }}
-        </div>
-      </div>
+        </section>
+      </section>
 
-      <div class="column is-2">
-        {{ .TableOfContents }}
-      </div>
+      <aside class="column is-2 is-hidden-touch article--docs--toc">
+        <div class="toc--container">
+          <h4 class="is-size-4 title">{{ .Title }}</h4>
+          {{ .TableOfContents }}
+        </div>
+      </aside>
     </div>
-  </article>
-</div>
+  </div>
+</article>
 {{ end }}
