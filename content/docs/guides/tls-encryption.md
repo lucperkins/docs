@@ -99,3 +99,7 @@ You can connect to the nginx server without specifying certs using the `--insecu
 ```bash
 curl -k https://example.com/prometheus/api/v1/label/job/values
 ```
+
+## Summary
+
+In this guide, you added TLS encryption for connections to a Prometheus instance by configuring nginx to use OpenSSL-generated certs and Prometheus to advertise the proper external URL.
